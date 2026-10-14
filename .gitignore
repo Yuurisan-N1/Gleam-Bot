@@ -1,0 +1,13 @@
+.venv/
+__pycache__/
+*.pyc
+*.egg-info/
+.env
+.env.demo
+proxy.txt
+session/*.json
+!session/*.json.example
+cookies/*.json
+!cookies/*.json.example
+*.png
+*.log

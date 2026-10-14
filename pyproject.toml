@@ -1,0 +1,22 @@
+[project]
+name = "gleam-mcp"
+version = "0.1.0"
+description = "MCP server: gleam.io campaign recon + .env-driven entry planner, plus X read-side"
+requires-python = ">=3.10"
+dependencies = [
+    "mcp>=1.0.0",
+    "curl_cffi>=0.7.0",
+    "playwright>=1.49",
+    "camoufox>=0.4",
+    "yuurisan==1.0.4",
+]
+
+[project.scripts]
+gleam-mcp = "gleam_mcp.server:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/gleam_mcp"]
